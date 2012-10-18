@@ -9,7 +9,7 @@ properties {
   $sln_file = "$base_dir\$sln_base.sln"
   $target = "Rebuild"
   $verbosity = "m"
-  $version = "1.3.0"
+  $version = "1.4.2"
   $samples_dir = "$base_dir\samples"
   $samples_sln_file = "$samples_dir\Caliburn.Micro.Autofac.Samples.sln"
   $src_dir = "$base_dir\src"
@@ -21,7 +21,7 @@ properties {
 
   $project_dlls = @( "Caliburn.Micro.Autofac.dll" );
   $platforms = @( "NET4", "SL4", "WP7" );
-  $nupack_dirs = @(	"NuPack", "NuPack\content", "NuPack\lib", "NuPack\lib\net40", "NuPack\lib\sl40", "NuPack\lib\sl3-wp" );
+  $nupack_dirs = @(	"NuPack", "NuPack\content", "NuPack\lib", "NuPack\lib\net40", "NuPack\lib\sl40", "NuPack\lib\sl4-windowsphone71" );
 }
 
 include .\psake_ext.ps1
@@ -86,7 +86,7 @@ task CreateNugetPackage -depends Release {
 
   cp $build_dir\NET4\*.dll $build_dir\Nupack\lib\net40
   cp $build_dir\SL4\*.dll $build_dir\Nupack\lib\sl40
-  cp $build_dir\WP7\*.dll $build_dir\Nupack\lib\sl3-wp
+  cp $build_dir\WP7\*.dll $build_dir\Nupack\lib\sl4-windowsphone71
 	
   ########### Caliburn.Micro.Autofac.nupkg
   $nupack = [xml](get-content $base_dir\$sln_base.nuspec)

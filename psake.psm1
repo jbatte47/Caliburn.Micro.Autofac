@@ -506,7 +506,7 @@ function Configure-BuildEnvironment {
             'x64' {
                 $bitness = 'Framework64'
             }
-            $null {
+            default {
                 $ptrSize = [System.IntPtr]::Size
                 switch ($ptrSize) {
                     4 {
@@ -519,9 +519,6 @@ function Configure-BuildEnvironment {
                         throw ($msgs.error_unknown_pointersize -f $ptrSize)
                     }
                 }
-            }
-            default {
-                throw ($msgs.error_unknown_bitnesspart -f $bitnessPart, $framework)
             }
         }
     }
