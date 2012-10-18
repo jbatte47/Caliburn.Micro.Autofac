@@ -1,9 +1,13 @@
-Caliburn.Micro.Autofac
-======================
+Caliburn.Micro.Autofac (2)
+==========================
                        
-Source code to the [Caliburn.Micro.Autofac nuget package](http://nuget.org/List/Packages/Caliburn.Micro.Autofac).
+Source code to the [Caliburn.Micro.Autofac2 nuget package](http://nuget.org/List/Packages/Caliburn.Micro.Autofac2).
 - [Caliburn.Micro.Autofac](http://buksbaum.us/things-i-did/caliburn-micro-autofac/)
 - [Dave's blog](http://buksbaum.us/)
+
+__Version 1.4.2 - 2012/10/17__
+  * Psake build fixes
+  * Updated Autofac to 2.6.3.862
 
 __Version 1.4.1 - 2012/05/21__
   * Merged Windows Phone 7.1 fixes from distantcam (https://github.com/distantcam/Caliburn.Micro.Autofac)
