@@ -100,7 +100,7 @@ namespace Caliburn.Micro.Autofac
             //  build the container
             Container = builder.Build();
 
-            PostBuildAction(Container);
+            PostBuildAction();
         }
         /// <summary>
         /// Do not override unless you plan to full replace the logic. This is how the framework
@@ -176,8 +176,7 @@ namespace Caliburn.Micro.Autofac
         /// <summary>
         /// Override to perform your own action on the built container. 
         /// </summary>
-        /// <param name="container">The built Autofac container </param>
-        protected void PostBuildAction(IContainer container)
+        protected virtual void PostBuildAction()
         {
             
         }
